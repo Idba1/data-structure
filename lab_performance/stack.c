@@ -10,11 +10,11 @@ void display()
 {
     if (top == -1)
     {
-        printf("Stack is empty!\n");
+        printf("stack is empty!\n");
     }
     else
     {
-        printf("Current stack: ");
+        printf("current stack: ");
         for (int i = 0; i <= top; i++)
         {
             printf("%d ", stack[i]);
@@ -27,7 +27,7 @@ void push(int value)
 {
     if (top >= stack_n - 1)
     {
-        printf("Stack is full! Cannot push %d\n", value);
+        printf("stack is full! Cannot push %d\n", value);
     }
     else
     {
@@ -42,7 +42,7 @@ void pop()
 {
     if (top == -1)
     {
-        printf("Stack is empty! Nothing to pop.\n");
+        printf("stack is empty.\n");
     }
     else
     {
@@ -57,9 +57,9 @@ int main()
     int choice, value;
 
     printf("Stack --> LIFO\n");
-    printf("1. Push\n");
-    printf("2. Pop\n");
-    printf("3. Exit\n");
+    printf("1. push\n");
+    printf("2. pop\n");
+    printf("3. exit\n");
 
     while (1)
     {
@@ -68,7 +68,7 @@ int main()
 
         if (choice == 1)
         {
-            printf("Enter a value to push: ");
+            printf("enter a value to push: ");
             scanf("%d", &value);
             push(value);
         }
@@ -78,14 +78,16 @@ int main()
         }
         else if (choice == 3)
         {
-            printf("Exit\n");
+            printf("exit\n");
             break;
         }
         else
         {
-            printf("invalid choice! please try again.\n");
+            printf("invalid choice.\n");
         }
     }
 
+    printf("current stack: \n");
+    display();
     return 0;
 }
