@@ -84,7 +84,7 @@ int main()
         }
         else
         {
-            printf("Invalid choice! Please try again.\n");
+            printf("invalid choice! Please try again.\n");
         }
     }
 
