@@ -50,10 +50,10 @@ void main()
     // Delete the second element
     if (head->ptr != head && head->ptr->ptr != head)
     {   
-        NODE *second = head->ptr->ptr;
-        head->ptr->ptr = second->ptr;
-        free(second);
-        printf("\nSecond element deleted successfully.\n");
+        NODE *sec = head->ptr->ptr;
+        head->ptr->ptr = sec->ptr;
+        free(sec);
+        printf("\nsec element deleted successfully.\n");
     }
     else
     {
